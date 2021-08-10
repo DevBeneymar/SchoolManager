@@ -129,7 +129,7 @@ router.post('/signin',(req,res,next)=>{
         failureFlash:true
     })(req,res,next);
 });
-// End process form login admin
+// End process form login admininstrateur
 
 // After login admin
 router.get('/admin',ensureAuthenticated,(req,res)=>{
