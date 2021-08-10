@@ -1,0 +1,153 @@
+{{!--
+#-------------------------------------------------------------------------------
+# Name: School Management
+# Version: 1.0.0
+#
+# Author: Petit-Homme Ben-Jacques
+# Mail: pben.jacques@gmail.com
+# Telf: +509 42003583 / 48846143
+#
+# Start Created: 15-01-2021
+# Copyright: (c) Benito 2021
+# Licence: <your licence>
+    #-------------------------------------------------------------------------------
+    --}}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="Petit-Homme Ben-Jacques" content="" />
+        <title>School-Magement</title>
+        <link href="/assets/css/styles.css" rel="stylesheet" />
+        <link href="/assets/css/calendar.css" rel="stylesheet" />
+        <link href="/assets/css/normalize.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/bootstrap-4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="/managers/dashboard">Admin</a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i
+                    class="fa fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
+                        aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/managers/logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="/managers/dashboard">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#teachers"
+                                aria-expanded="false" aria-controls="teachers">
+                                <div class="sb-nav-link-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+                                Teachers
+                                <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="teachers" aria-labelledby="headingOne"
+                                data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/managers/teachers"><i class="fas fa-eye"></i>&nbsp;View All</a>
+                                    <a class="nav-link" href="#"><i class="fas fa-plus"></i>&nbsp;Add</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#students" aria-expanded="false"
+                                aria-controls="students">
+                                <div class="sb-nav-link-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+                                Students
+                                <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="students" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Static Navigation</a>
+                                    <a class="nav-link" href="#">Light Sidenav</a>
+                                </nav>
+                            </div>
+
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Coding by:</div>
+                        Petit-Homme Ben-Jacques
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container">
+                        <h1 class="mt-4">{{ title }}</h1>
+                        <span class="mb-4">
+                            <hr>
+                        </span>
+                        {{!-- Content --}}
+                            {{{body}}}
+                        {{!-- Content --}}
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; bentechnophile 
+                                <script>document.write(new Date().getFullYear());</script>
+                            </div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+        <script src="/assets/fontawesome/js/fontawesome.min.js">
+        </script><script src="/assets/fontawesome/js/all.min.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        <script src="/assets/js/calendar.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "School Management System",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Petit-Homme Ben-Jacques",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "helmet": "^4.4.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.15",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

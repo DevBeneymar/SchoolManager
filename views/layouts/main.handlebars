@@ -1,0 +1,45 @@
+{{!-- 
+#-------------------------------------------------------------------------------
+# Name: School Management
+# Version: 1.0.0
+#
+#  Author: Petit-Homme Ben-Jacques
+#  Mail: pben.jacques@gmail.com
+#  Telf: +509 42003583 / 48846143
+# 
+# Start Created: 15-01-2021
+# Copyright: (c) Benito 2021
+# Licence: <your licence>
+#-------------------------------------------------------------------------------
+ --}}
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="author" content="Petit-Homme Ben-Jacques" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/bootstrap-4.3.1/css/bootstrap.min.css">
+        {{!-- <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css"> --}}
+        <link rel="stylesheet" href="/assets/css/animationText.css">
+        <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        <title>School {{#if title}} | {{title}} {{/if}}</title>
+    </head>
+    <body>
+        {{> _navbar}}
+        <div class="container mt-3">
+            {{{body}}} <br>
+        </div>
+    </body>
+    <footer>
+        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    </footer>
+</html>
+<!--
+written By : Petit-Homme Ben-Jacques
+Telf : +509 42003583 / 48846143
+Mail: pben.jacques@gmail.com
+-->

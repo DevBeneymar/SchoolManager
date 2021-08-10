@@ -1,0 +1,51 @@
+<br><br>
+<div class="container mt-4 h-100 border rounded border-primary pb-3 pt-3">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-9 col-lg-9 col-sm-9 col-xl-9">
+            <div class="panel panel-primary">
+                {{!-- <div class="panel-heading">
+                    <h3 class="panel-title">Please Admin, Sign In</h3>
+                </div> --}}
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <h2 class="glaw">Please! Admin, Login In</h2>
+                        <hr class="mt-0"><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center ">
+                        {{> _errors}}
+                        {{> _msg}}                       
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form accept-charset="UTF-8" role="form" method="post" action="/managers/signin">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="E-mail" placeholder="pben.jacques@gmail.com"  name="emailAd" type="email" required autofocus value="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" required autofocus placeholder="Password" name="passwordAd" type="password" value="">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                                </label>
+                            </div>
+                            <input class="btn btn-lg btn-info btn-block" type="submit" value="Login">
+                            <div class="text-center">
+                                You haven't an account? <a href="/managers/signup">Register here</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+written By : Petit-Homme Ben-Jacques
+Telf : +509 42003583 / 48846143
+Mail: pben.jacques@gmail.com
+-->

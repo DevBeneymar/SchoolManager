@@ -1,0 +1,49 @@
+<style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+</style>
+<link rel="stylesheet" href="/assets/css/animationText.css">
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12 mt-4">
+        <div class="jumbotron" style="margin-bottom:0px;">
+            <h1 class="display-4 mt-3">Hello, Admin</h1>
+            <p class="lead text-center">Welcome to Online School Management System.</p>
+            <hr class="my-4">
+            {{#each tab}}
+            <p>{{element.login}}:{{element.pass}}</p>
+            {{else}}
+            
+            {{/each}}
+            <p class="text-center">You can access various features after Login/SignUp.</p>
+            <p class="lead text-center">
+                <a class="btn btn-primary btn-lg" href="/managers/signup/" role="button">SignUp</a>
+                <a class="btn btn-primary btn-lg" href="/managers/signin/" role="button">Login</a>
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+<div style="height:70px;"></div>
+<div class="row fixed-bottom">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12 mb-0">
+        {{> _footer}}
+    </div>
+</div>
+<!--
+written By : Petit-Homme Ben-Jacques
+Telf : +509 42003583 / 48846143
+Mail: pben.jacques@gmail.com
+-->
+
+

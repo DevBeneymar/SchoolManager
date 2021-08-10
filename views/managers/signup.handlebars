@@ -1,0 +1,121 @@
+<!--
+written By : Petit-Homme Ben-Jacques
+Telf : +509 42003583 / 48846143
+Mail: pben.jacques@gmail.com
+-->
+<link rel="stylesheet" href="/assets/css/admin-signup.css">
+<br><br>
+<div class="container border rounded border-primary pt-1 pb-1">
+    <form class="form-horizontal" role="form" method="POST" action="/managers/signup">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2 class="glaw">Register New Manager</h2>
+                <hr class="mt-0"> <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 "></div>
+            <div class="col-md-6 text-center">
+                {{> _errors}}
+                {{> _msg}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="name">Name And Firstname</label>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="d-flex flex-column border rounded-right flex-grow-1">
+                        <input type="text" class="form-control border-top-0 border-left-0 pb-1 mb-2 border-right-0 border-bottom" name="name"
+                            id="name" placeholder="Name" value="{{name}}" required autofocus>
+
+                        <input type="text" class="form-control border-0 pb-2" name="firstname" id="firstname" placeholder="Firstname" value="{{firstname}}" autofocus required>
+                    </div>
+                </div>
+            </div>
+        </div> <br>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="email">E-Mail</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-at"></i>
+                            </span>
+                        </div>
+                        <input type="email" name="email" value="{{email}}" class="form-control" id="email" placeholder="pben.jacques@gmail.com"
+                            required autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                        <!-- Put e-mail validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-danger">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-key"></i>
+                            </span>
+                        </div>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="password">Confirm Password</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-repeat"></i>
+                            </span>
+                        </div>
+                        <input type="password" name="passConfirm" class="form-control" id="password-confirm"
+                            placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-info"><i class="fa fa-user-plus"></i> Register</button>
+                <div class="text-center">Already have an account? <a href="/managers/signin">Login here</a></div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--
+written By : Petit-Homme Ben-Jacques
+Telf : +509 42003583 / 48846143
+Mail: pben.jacques@gmail.com
+-->
